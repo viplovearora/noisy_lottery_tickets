@@ -96,29 +96,3 @@ class DataParallel(Model, torch.nn.DataParallel):
 
     def save(self, save_location: str, save_step: Step):
         self.module.save(save_location, save_step)
-
-
-class DistributedDataParallel(Model, torch.nn.parallel.DistributedDataParallel):
-    def __init__(self, module: Model, device_ids):
-        super(DistributedDataParallel, self).__init__(module=module, device_ids=device_ids)
-
-    @property
-    def prunable_layer_names(self): return self.module.prunable_layer_names
-
-    @property
-    def output_layer_names(self): return self.module.output_layer_names
-
-    @property
-    def loss_criterion(self): return self.module.loss_criterion
-
-    @staticmethod
-    def get_model_from_name(model_name, outputs, initializer): raise NotImplementedError
-
-    @staticmethod
-    def is_valid_model_name(model_name): raise NotImplementedError
-
-    @staticmethod
-    def default_hparams(): raise NotImplementedError
-
-    def save(self, save_location: str, save_step: Step):
-        self.module.save(save_location, save_step)
