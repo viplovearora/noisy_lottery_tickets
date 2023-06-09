@@ -21,6 +21,14 @@ This framework is a fork of the [OpenLTH](https://github.com/facebookresearch/op
 - Install the requirements.
 -  Modify `platforms/local.py` so that it contains the paths where you want datasets and results to be stored. By default, they will be stored in `~/open_lth_data/` and `~/open_lth_datasets/`.
 
+## Experiments
+Two-layer FCN with MNIST
+```
+python open_lth.py lottery --default_hparams=mnist_lenet_300 --training_steps=120ep --levels=20 --pruning_fraction=0.2 --random_labels_fraction 0.2
+```
+you can change the number of neurons in the hidden layer by changing the `default_hyperparameter` option. The number of levels of pruning need to be changed accordingly to make sure that the entire sparse double descent curve is observed.
+
+
 ## Acknowledgement
 We develop our project mainly on the [OpenLTH](https://github.com/facebookresearch/open_lth), which is easy to use and extend. Thanks for the great work!
 ## Citation
