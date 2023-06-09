@@ -40,7 +40,7 @@ If you find this useful for your research, please cite the following paper.
 ```
 @inproceedings{arora2023quantifying,
   title={Quantifying lottery tickets under label noise: accuracy, calibration, and complexity},
-  author={Anonymous},
+  author={Arora, Viplove and Irto, Daniele and Goldt, Sebastian and Sanguinetti, Guido},
   booktitle={The 39th Conference on Uncertainty in Artificial Intelligence},
   year={2023},
   url={https://openreview.net/forum?id=YVWw8OSEse}
