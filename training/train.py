@@ -11,7 +11,7 @@ import datasets.registry
 from foundations import hparams
 from foundations import paths
 from foundations.step import Step
-from models.base import Model, DataParallel, DistributedDataParallel
+from models.base import Model, DataParallel
 import models.registry
 from platforms.platform import get_platform
 from training.checkpointing import restore_checkpoint
